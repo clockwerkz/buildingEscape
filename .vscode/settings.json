@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		"E:/git-repos/buildingEscape/.git": true,
+		"E:/git-repos/buildingEscape/.vscode": true,
+		"E:/git-repos/buildingEscape/Content": true,
+		"E:/git-repos/buildingEscape/Intermediate": true,
+		"E:/git-repos/buildingEscape/Saved": true
+	}
+}

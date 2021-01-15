@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "buildingEscape (Debug)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscape Win64 Debug Build",
+			"program": "E:\\git-repos\\buildingEscape\\Binaries\\Win64\\buildingEscape-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscape (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscape Win64 DebugGame Build",
+			"program": "E:\\git-repos\\buildingEscape\\Binaries\\Win64\\buildingEscape-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscape (Development)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscape Win64 Development Build",
+			"program": "E:\\git-repos\\buildingEscape\\Binaries\\Win64\\buildingEscape.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscape (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscape Win64 Shipping Build",
+			"program": "E:\\git-repos\\buildingEscape\\Binaries\\Win64\\buildingEscape-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscape (Test)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscape Win64 Test Build",
+			"program": "E:\\git-repos\\buildingEscape\\Binaries\\Win64\\buildingEscape-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscapeEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscapeEditor Win64 Debug Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"E:\\git-repos\\buildingEscape\\buildingEscape.uproject"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscapeEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscapeEditor Win64 DebugGame Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"E:\\git-repos\\buildingEscape\\buildingEscape.uproject"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "buildingEscapeEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "buildingEscapeEditor Win64 Development Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"E:\\git-repos\\buildingEscape\\buildingEscape.uproject"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"E:\\git-repos\\buildingEscape\\buildingEscape.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.22"
+		}
+	]
+}
