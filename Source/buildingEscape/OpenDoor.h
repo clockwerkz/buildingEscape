@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Engine/TriggerVolume.h"
+#include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 #include "OpenDoor.generated.h"
 
 
@@ -23,6 +26,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	void OpenDoor(float DeltaTime);
+	void CloseDoor(float DeltaTime);
 
 private:
 	float InitialYaw;
@@ -31,4 +36,20 @@ private:
 	UPROPERTY(EditAnywhere)
 	float TargetYaw = 90.f;
 
+	UPROPERTY(EditAnywhere, Category="Door Speed",meta=(ClampMin = "1.0", ClampMax = "10.0", UIMin = "1.0", UIMax = "10.0"))
+	float OpenDoorSpeed = 1.f;
+
+	UPROPERTY(EditAnywhere, Category="Door Speed",meta=(ClampMin = "1.0", ClampMax = "10.0", UIMin = "1.0", UIMax = "10.0"))
+	float CloseDoorSpeed = 8.f;
+
+	float DoorLastOpened = 0.f;
+
+	UPROPERTY(EditAnywhere, Category="Door Speed", meta=(ClampMin = "0", ClampMax = "2.0", UIMin = "0", UIMax = "2.0"))
+	float DoorCloseDelay = 0.5f;
+
+	UPROPERTY(EditAnywhere)
+	ATriggerVolume* PressurePlate = nullptr;
+
+	UPROPERTY(EditAnywhere)
+	AActor* ActorThatOpens;
 };
