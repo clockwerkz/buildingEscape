@@ -1,7 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "GameFramework/PlayerController.h"
+#include "Engine/World.h"
 #include "GrabNabber.h"
+
+#define OUT
 
 // Sets default values for this component's properties
 UGrabNabber::UGrabNabber()
@@ -28,7 +31,16 @@ void UGrabNabber::BeginPlay()
 void UGrabNabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+		OUT PlayerViewPointLocation, 
+		OUT PlayerViewPointRotation
+	);
+	UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *PlayerViewPointLocation.ToString());
+	UE_LOG(LogTemp, Warning, TEXT("Rotation: %s"), *PlayerViewPointRotation.ToString());
+	// Get Player's viewpoint
+	// Ray-cast out to a certain distance (Reach)
+	// See what we are hitting
 }
 
